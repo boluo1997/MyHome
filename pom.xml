@@ -7,15 +7,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.boluo</groupId>
-    <artifactId>boluo-blog</artifactId>
+    <artifactId>MyHome</artifactId>
 
     <!-- SNAPSHOT: 开发版, RELEASE: 完成版 -->
     <version>0.0.1-SNAPSHOT</version>
 
     <!-- web工程打包为war, java工程打包为jar -->
     <packaging>jar</packaging>
-    <name>boluo-blog</name>
-    <description>boluo-blog</description>
+    <name>MyHome</name>
+    <description>my-home-everything-index</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
