@@ -36,49 +36,32 @@ Pattern / Matcher
 
 
 ### 简述一下JDBC连接的步骤
-1、加载JDBC驱动程序
-2、创建数据库的连接
-3、创建一个 Statement (静态SQL) / PreparedStatement (动态SQL) / CallableStatement (数据库存储过程)
-4、执行SQL语句 executeQuery() 执行查询, 返回ResultSet / executeUpdate() 执行 INSERT、UPDATE、DELETE / execute()
-5、遍历结果集 rs.next()
-6、处理异常，关闭JDBC对象资源
+1. 加载JDBC驱动程序
+2. 创建数据库的连接
+3. 创建一个 Statement (静态SQL) / PreparedStatement (动态SQL) / CallableStatement (数据库存储过程)
+4. 执行SQL语句 executeQuery() 执行查询, 返回ResultSet / executeUpdate() 执行 INSERT、UPDATE、DELETE / execute()
+5. 遍历结果集 rs.next()
+6. 处理异常，关闭JDBC对象资源
 
 
-
-
-
-
-
-
-
-```Java
-// ArrayList 和 LinkedList 的区别是什么 ? 
-1. ArrayList是动态数组的数据结构实现，查找和遍历的效率较高；
-2. LinkedList是双向链表的数据结构，增加和删除的效率较高；
-    
-
-
+### 用过1.8的新特性吗, Lambda表达式和集合的Stream流操作
+```java
+list.stream().mapToInt(i -> i).sum();
+list.stream().map(i -> i + "a").forEach(System.out::println);
 ```
 
 
 
+## 集合
+
+### ArrayList 和 LinkedList 的区别是什么
+1. ArrayList是动态数组的数据结构实现, 查找和遍历的效率较高;
+2. LinkedList是双向链表的数据结构, 增加和删除的效率较高;
 
 
 
 
 
-
-
-
-- 假设一个List集合, 要存 int 类型的数字, 使用什么泛型
-
-  ```Java
-  List<Integer> list = new ArrayList<>(5, 13, 50, 60);
-  
-  // 2. stream流
-  int sum1 = list.stream().mapToInt(i -> i).sum();
-  
-  ```
 
 
 
