@@ -9,7 +9,7 @@
 - Linux
 
 ### BigData Dev
-- [Java](./interview/v01_Java2.md)
+- [Java](./interview/v02_Java2.md)
 - Spark
 - Hive
 - Kafka
