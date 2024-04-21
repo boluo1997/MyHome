@@ -15,6 +15,10 @@
 集合或者表操作: interection，join
 
 
+### Spark 中的 cache / persist / checkpoint 应该在什么时候使用
+
+
+
 ### Spark的一个运行架构 Job -> Stage -> Task 的关系
 
 
@@ -41,6 +45,8 @@ Spark累加器的作用
 ### Spark SQL调优
 Spark SQL的谓词下推
 
+
+### Spark 数据倾斜问题 产生的原因以及解决方案
 
 
 
