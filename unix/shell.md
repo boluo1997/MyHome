@@ -52,10 +52,14 @@ docker exec -it <id> /bin/bash
 ```
 
 
+```shell
+docker run -d --name zookeeper -p 2181:2181 -t wurstmeister/zookeeper
+```
+
 
 ##### docker 启动 kafka
 ```shell
-docker run -d --name kafka-test -p 9092:9092 \
+docker run -d --name kafka -p 9092:9092 \
 --link zookeeper:zookeeper \
 --env KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 \
 --env KAFKA_ADVERTISED_HOST_NAME=localhost \
@@ -63,6 +67,18 @@ docker run -d --name kafka-test -p 9092:9092 \
 --env KAFKA_LOG_DIRS=/kafka/logs \
 -v kafka_vol:/kafka  \
 wurstmeister/kafka
+
+
+# 这个是可以成功启动的 2025年1月25日
+docker run -d --name kafka \
+-p 9092:9092 \
+-e KAFKA_BROKER_ID=0 \
+-e KAFKA_ZOOKEEPER_CONNECT=118.178.253.61:2181 \
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://118.178.253.61:9092 \
+-e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 wurstmeister/kafka
+
+
+
 ```
 
 
@@ -96,7 +112,7 @@ vim /opt/kafka/config/server.properties
 
 # 允许外部端口连接
 listeners=PLAINTEXT://:9092
-# 外部代理地址
+# 外部代理地址docker
 advertised.listeners=PLAINTEXT://118.178.253.61:9092
 
 192.168.130.130是我虚拟机服务器自己的地址，可使用ifconfig命令查看
